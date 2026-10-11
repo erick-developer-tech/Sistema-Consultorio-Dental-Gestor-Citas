@@ -9,7 +9,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Folder Include="Recetas\" />
 		<Folder Include="Servicios\" />
 		<Folder Include="Usuarios\" />
 	</ItemGroup>

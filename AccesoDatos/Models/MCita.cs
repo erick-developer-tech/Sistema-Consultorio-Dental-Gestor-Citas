@@ -20,5 +20,6 @@ namespace AccesoDatos.Models
         public string Estado { get; set; } = string.Empty;
         public bool Pagado { get; set; }
         public string Notas { get; set; }
+        public string InfoCita => $"#{Id} - {Paciente} - {Servicio} - {FechaHora}";
     }
 }

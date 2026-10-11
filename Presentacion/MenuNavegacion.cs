@@ -1,5 +1,6 @@
 using Presentacion.Citas;
 using Presentacion.Pacientes;
+using Presentacion.Recetas;
 using Presentacion.Servicios;
 using Presentacion.Usuarios;
 
@@ -12,6 +13,7 @@ namespace Presentacion
             InitializeComponent();
             if (rol.Equals("Administrador")) 
             {
+                serviciosToolStripMenuItem.Enabled = true;
                 usuariosToolStripMenuItem.Enabled = true;
                 pacientesToolStripMenuItem.Enabled = true;
                 citasToolStripMenuItem.Enabled = true;
@@ -19,17 +21,19 @@ namespace Presentacion
             }
             else if (rol.Equals("Dentista"))
             {
+                serviciosToolStripMenuItem.Enabled = true;
                 usuariosToolStripMenuItem.Enabled = false;
                 pacientesToolStripMenuItem.Enabled = true;
                 citasToolStripMenuItem.Enabled = true;
-                recetasToolStripMenuItem.Enabled = false;
+                recetasToolStripMenuItem.Enabled = true;
             }
             else if (rol.Equals("Asistente"))
             {
+                serviciosToolStripMenuItem.Enabled = false;
                 usuariosToolStripMenuItem.Enabled = false;
-                pacientesToolStripMenuItem.Enabled = true;
+                pacientesToolStripMenuItem.Enabled = false;
                 citasToolStripMenuItem.Enabled = true;
-                recetasToolStripMenuItem.Enabled = false;
+                recetasToolStripMenuItem.Enabled = true;
             }
         }
 
@@ -79,7 +83,13 @@ namespace Presentacion
 
         private void recetasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
+            FrmRecetas frm = new FrmRecetas();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)

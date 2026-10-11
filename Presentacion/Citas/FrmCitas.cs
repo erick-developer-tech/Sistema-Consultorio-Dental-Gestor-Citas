@@ -120,11 +120,13 @@ namespace Presentacion.Citas
 
                 if (dataGridViewLista.Columns["IdUsuario"] != null ||
                     dataGridViewLista.Columns["IdPaciente"] != null ||
-                    dataGridViewLista.Columns["IdServicio"] != null)
+                    dataGridViewLista.Columns["IdServicio"] != null ||
+                    dataGridViewLista.Columns["InfoCita"] != null)
                 {
                     dataGridViewLista.Columns["IdUsuario"].Visible = false;
                     dataGridViewLista.Columns["IdPaciente"].Visible = false;
                     dataGridViewLista.Columns["IdServicio"].Visible = false;
+                    dataGridViewLista.Columns["InfoCita"].Visible = false;
                 }
 
                 labelTotal.Text = $"Total de citas: {lista.Count}";
@@ -154,11 +156,13 @@ namespace Presentacion.Citas
 
                 if (dataGridViewLista.Columns["IdUsuario"] != null ||
                     dataGridViewLista.Columns["IdPaciente"] != null ||
-                    dataGridViewLista.Columns["IdServicio"] != null)
+                    dataGridViewLista.Columns["IdServicio"] != null ||
+                    dataGridViewLista.Columns["InfoCita"] != null)
                 {
                     dataGridViewLista.Columns["IdUsuario"].Visible = false;
                     dataGridViewLista.Columns["IdPaciente"].Visible = false;
                     dataGridViewLista.Columns["IdServicio"].Visible = false;
+                    dataGridViewLista.Columns["InfoCita"].Visible = false;
                 }
 
                 labelTotal.Text = $"Total de citas: {lista.Count}";
